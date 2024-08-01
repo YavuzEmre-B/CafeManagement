@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CafeManagement.Models.Product>
+
+<h1>Products</h1>
+
+<a asp-controller="Product" asp-action="Create">Create New</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.Price</td>
+                <td>
+                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

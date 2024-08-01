@@ -1,0 +1,16 @@
+﻿@model CafeManagement.Models.Product
+
+<h1>Edit Product</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName" />
+    </div>
+    <div>
+        <label asp-for="Price"></label>
+        <input asp-for="Price" />
+    </div>
+    <button type="submit">Save</button>
+</form>

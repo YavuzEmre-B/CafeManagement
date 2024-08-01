@@ -1,0 +1,19 @@
+﻿@model CafeManagement.Models.Receipt
+
+<h1>Delete Receipt</h1>
+
+<div>
+    <h4>Are you sure you want to delete this receipt?</h4>
+    <div>
+        <strong>Table ID:</strong> @Model.TableId<br />
+        <strong>Product ID:</strong> @Model.ProductId<br />
+        <strong>Purchase Date:</strong> @Model.PurchaseDate.ToString("d")<br />
+        <strong>Quantity:</strong> @Model.Quantity
+    </div>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Delete</button>
+    <a asp-controller="Receipt" asp-action="Index">Cancel</a>
+</form>

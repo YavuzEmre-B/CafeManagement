@@ -1,0 +1,29 @@
+﻿@model IEnumerable<CafeManagement.Models.Receipt>
+
+<h2>Receipts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Table ID</th>
+            <th>Product ID</th>
+            <th>Purchase Date</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var receipt in Model)
+        {
+            <tr>
+                <td>@receipt.Id</td>
+                <td>@receipt.TableId</td>
+                <td>@receipt.ProductId</td>
+                <td>@receipt.PurchaseDate.ToString("g")</td>
+                <td>@receipt.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Create New Receipt</a>

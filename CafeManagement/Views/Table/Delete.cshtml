@@ -1,0 +1,16 @@
+﻿@model CafeManagement.Models.Table
+
+<h1>Delete Table</h1>
+
+<div>
+    <h4>Are you sure you want to delete this table?</h4>
+    <div>
+        <strong>Table Number:</strong> @Model.TableNumber
+    </div>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Delete</button>
+    <a asp-controller="Table" asp-action="Index">Cancel</a>
+</form>

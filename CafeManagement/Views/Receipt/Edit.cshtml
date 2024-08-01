@@ -1,0 +1,24 @@
+﻿@model CafeManagement.Models.Receipt
+
+<h1>Edit Receipt</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="TableId"></label>
+        <input asp-for="TableId" />
+    </div>
+    <div>
+        <label asp-for="ProductId"></label>
+        <input asp-for="ProductId" />
+    </div>
+    <div>
+        <label asp-for="PurchaseDate"></label>
+        <input asp-for="PurchaseDate" type="date" />
+    </div>
+    <div>
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" />
+    </div>
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,15 @@
+﻿@model CafeManagement.Models.Product
+
+<h1>Create Product</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="ProductName"></label>
+        <input asp-for="ProductName" />
+    </div>
+    <div>
+        <label asp-for="Price"></label>
+        <input asp-for="Price" />
+    </div>
+    <button type="submit">Create</button>
+</form>
